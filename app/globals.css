@@ -7,11 +7,15 @@ body {
 }
 
 @keyframes slide {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
+  50% {
+    
     transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -50,7 +54,7 @@ body {
 
 .logos-slide {
   display: inline-flex;
-  animation: 35s slide infinite linear;
+  animation: 35s slide infinite ease-in-out;
 }
 
 .logos-slide img {
