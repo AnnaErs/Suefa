@@ -1,6 +1,8 @@
 import { memo } from "react";
 
-const Slider = () => {
+import { SliderType } from "./types";
+
+const Slider: SliderType = () => {
     return (
         <div className="logos">
             <div className="logos-slide">
