@@ -1,4 +1,5 @@
 import { io } from "socket.io-client";
+import {useRouter} from "next/navigation";
 
 const ground = new Image();
 ground.src = "/ground.png";
@@ -7,6 +8,9 @@ let dir;
 
 const foodImg = new Image();
 foodImg.src = "/food.png";
+
+
+
 
 export function createGame(ctx) {
     const socket = io("localhost:8080/mobile");
@@ -25,6 +29,11 @@ export function createGame(ctx) {
     socket.on("enterButtonClickOnMobile", () => {
         restartGame();
     });
+    socket.on("backButtonClickOnMobile", () => {
+        console.log('rhenj');
+        window.history.back();
+    });
+
     let box = 32;
 
     let score = 0;
