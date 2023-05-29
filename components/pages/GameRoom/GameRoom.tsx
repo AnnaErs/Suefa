@@ -16,9 +16,7 @@ const GameRoom: GameRoomType = () => {
         e.preventDefault();
         router.push("/");
     };
-    const handleClickForwards = () => {
-        setIsOpen;
-    };
+
     useEffect(() => {
         const socket = io("localhost:8080/mobile");
         const min = 100000;
@@ -39,7 +37,7 @@ const GameRoom: GameRoomType = () => {
                     userAmount="1"
                     connectionCode={code?.toString() || ""}
                     onClickBackwards={handleClickBackwards}
-                    onClickForwards={handleClickForwards}
+                    onClickForwards={setIsOpen}
                 />
                 {isOpen ? (
                     <Modal
