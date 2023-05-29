@@ -5,6 +5,9 @@ let dir;
 const foodImg = new Image();
 foodImg.src = "/food.png";
 
+
+
+
 export function createGame(ctx) {
     const socket = io("localhost:8080/mobile");    
     socket.on("rightButtonClickOnMobile", () => {
@@ -17,10 +20,13 @@ export function createGame(ctx) {
         if (dir != "down") dir = "up";
     });    
     socket.on("enterButtonClickOnMobile", () => {
-        restartGame();    });
-    socket.on("backButtonClickOnMobile", () => {        
+        restartGame();
+    });
+    socket.on("backButtonClickOnMobile", () => {
         console.log('rhenj');
-        window.history.back();    });
+        window.history.back();
+    });
+
     let box = 32;
     let score = 0;
     let food = {
