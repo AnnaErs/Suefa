@@ -81,7 +81,7 @@ export function clickOnCurrentBlock() {
 }
 
 const GameMenu: GameMenuType = () => {
-    const [selectedButton, setSelectingButton] = useState();
+    const [selectedButton, setSelectingButton] = useState(false);
     const router = useRouter();
     const handleClick = (e: any) => {
         e.preventDefault();
