@@ -27,6 +27,6 @@
       "@utils/":["./utils/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/pages/Snake/Snake.jsx", "components/pages/Snake/game.js", "components/pages/gameMenu/GameMenu.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/pages/Snake/Snake.jsx", "components/pages/Snake/game.js", "components/pages/GameMenu/GameMenu.tsx"],
   "exclude": ["node_modules"]
 }
