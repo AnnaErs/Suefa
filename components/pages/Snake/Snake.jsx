@@ -1,10 +1,9 @@
 "use client";
 import {memo, useEffect, useRef, useState} from "react";
 import { useRouter } from 'next/navigation';
-import { io } from "socket.io-client";
+
 import {createGame} from "./game"
 
-let dir;
 
 const Snake = () => {
     const ref =useRef();
