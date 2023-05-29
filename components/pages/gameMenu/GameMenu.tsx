@@ -3,13 +3,9 @@ import { memo, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { io } from "socket.io-client";
 import { UserIcon } from "@heroicons/react/20/solid";
-
 import Button from "@components/ui-kit/Button/Button";
 import Modal from "@components/ui-kit/Modal/Modal";
-
 import { GameMenuType } from "./types";
-
-
 
 export function clickOnCurrentBlock() {
     const currentBlock = document.querySelector(
@@ -17,7 +13,6 @@ export function clickOnCurrentBlock() {
     ) as HTMLElement;
     currentBlock && currentBlock.click();
 }
-
 const GameMenu: GameMenuType = () => {
     let [selectedButton, setSelectingButton] = useState(1);
     const router = useRouter();
@@ -27,17 +22,17 @@ const GameMenu: GameMenuType = () => {
     };
     useEffect(() => {
         function moveToRightBlock() {
-            setSelectingButton(selectedButton+=1);
-        };
+            setSelectingButton((selectedButton += 1));
+        }
         function moveToLeftBlock() {
-            setSelectingButton(selectedButton-=1);
-        };
+            setSelectingButton((selectedButton -= 1));
+        }
         function moveToDownBlock() {
-            setSelectingButton(selectedButton+=1)
-        };
+            setSelectingButton((selectedButton += 1));
+        }
         function moveToUpBlock() {
-            setSelectingButton(selectedButton-=1)
-        };
+            setSelectingButton((selectedButton -= 1));
+        }
         const socket = io("localhost:8080/mobile");
         socket.on("rightButtonClickOnMobile", () => {
             moveToRightBlock();
@@ -55,9 +50,7 @@ const GameMenu: GameMenuType = () => {
             clickOnCurrentBlock();
         });
     }, [router]);
-
     const [isOpen, setIsOpen] = useState(false);
-
     return (
         <>
             <div className="w-full min-h-screen bg-dark-gray ">
@@ -77,7 +70,7 @@ const GameMenu: GameMenuType = () => {
                                 <h2 className="text-5xl mr-6">Snake</h2>
                                 <p className="flex flex-row text-base">1</p>
                                 <UserIcon className="h-4 w-4" />
-                            </div>
+                            </div>{" "}
                             <p className=" text-2xl">
                                 Snake — компьютерная игра, возникшая в середине
                                 или в конце 1970-х. Игрок управляет длинным,
@@ -158,5 +151,4 @@ const GameMenu: GameMenuType = () => {
         </>
     );
 };
-
 export default memo(GameMenu);
