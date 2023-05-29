@@ -24,8 +24,9 @@
       "@/pages/*": ["./components/pages/*"],
       "@/ui-kit/*": ["./components/ui-kit/*"],
       "@app/*":["./app/*"],
+      "@utils/":["./utils/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/pages/Snake/Snake.jsx", "components/pages/Snake/game.js", "components/pages/gameMenu/GameMenu.tsx"],
   "exclude": ["node_modules"]
 }

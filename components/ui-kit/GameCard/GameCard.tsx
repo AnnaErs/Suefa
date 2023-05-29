@@ -5,7 +5,13 @@ import Button from "../Button/Button";
 
 import { GameCardType } from "./types";
 
-const GameCard: GameCardType = ({ userName, userAmount, connectionCode,onClickBackwards,onClickForwards }) => {
+const GameCard: GameCardType = ({
+    userName,
+    userAmount,
+    connectionCode,
+    onClickBackwards,
+    onClickForwards,
+}) => {
     return (
         <div className="flex items-center justify-center w-[770px] h-[366px] bg-dark-gray rounded-[20px]">
             <div className=" flex text-white text-2xl gap-8 flex-col">
@@ -30,10 +36,15 @@ const GameCard: GameCardType = ({ userName, userAmount, connectionCode,onClickBa
                     </div>
                 </div>
                 <div className="flex flex-row justify-between">
-                    <button onClick={onClickBackwards} className="text-white bg-dark-gray text-xl border-2 border-blue px-7 py-4 rounded-[20px]">
+                    <button
+                        onClick={onClickBackwards}
+                        className="text-white bg-dark-gray text-xl border-2 border-blue px-7 py-4 rounded-[20px]"
+                    >
                         Назад
                     </button>
-                    <Button onClick={onClickForwards}>Начать прямо сейчас</Button>
+                    <Button onclick={onClickForwards}>
+                        Начать прямо сейчас
+                    </Button>
                 </div>
             </div>
         </div>
@@ -41,4 +52,3 @@ const GameCard: GameCardType = ({ userName, userAmount, connectionCode,onClickBa
 };
 
 export default memo(GameCard);
-
