@@ -1,13 +1,17 @@
 import { memo } from "react";
-import Snake from "@/pages/Snake/Snake";
 
+import Snake from "@components/pages/Snake/Snake";
 
-function GameRoomPage () {
-    return<Snake>
+import { GameType } from "./types";
 
-    </Snake>
-
+const Game: GameType = () => {
+    return (
+        <div className="w-full h-screen bg-dark-gray">
+            <div className="flex justify-center items-end p-40">
+                <Snake />
+            </div>
+        </div>
+    );
 };
 
-
-export default memo(GameRoomPage);
+export default memo(Game);
