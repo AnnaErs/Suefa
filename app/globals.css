@@ -24,8 +24,8 @@ body {
 .logos {
   box-sizing: border-box;
   overflow: hidden;
-  padding: 60px 0;
-  background: white;
+  padding: 8px 0;
+  background: #211F1F;
   white-space: nowrap;
   position: relative;
 }
@@ -34,7 +34,7 @@ body {
 .logos:after {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 200px;
   height: 100%;
   content: "";
   z-index: 2;

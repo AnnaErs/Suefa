@@ -22,15 +22,6 @@ const MainPage: MainPageType = () => {
                     src="https://storage.yandexcloud.net/suefa-backet/Suefa-mainpage.png"
                 />
             </div>
-            {/* <h1>Hello Suefa</h1>
-            
-            <Button>Играть прямо сейчас</Button>
-            <Accordeon
-                question="На каких телефонах можно играть?"
-                answer="На всех каких пожелаете. Главное, чтобы они были сенсорными, а также, поддерживало приложение "
-            />
-
-            <Slider /> */}
         </div>
     );
 };
