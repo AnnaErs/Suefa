@@ -1,12 +1,10 @@
 import { io } from "socket.io-client";
-const ground = new Image();
+
+const ground = typeof window !== 'undefined' ?  new Image(): {};
 ground.src = "/ground.png";
 let dir;
-const foodImg = new Image();
-foodImg.src = "/food.png";
-
-
-
+const foodImg = typeof window != 'undefined' ? new Image(): {};
+foodImg.src = "/food.png"; 
 
 export function createGame(ctx) {
     const socket = io("localhost:8080/mobile");    
