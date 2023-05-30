@@ -23,9 +23,7 @@ const Snake = () => {
     },[router])
 
     return (
-        <canvas ref={ref} width="608px" height="608px">
-
-        </canvas>
+        <canvas ref={ref} width="608px" height="608px"/>
     );
 };
 
