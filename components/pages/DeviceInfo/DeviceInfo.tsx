@@ -4,7 +4,10 @@ import { DeviceInfoType } from "./types";
 
 const DeviceInfo: DeviceInfoType = () => {
     return (
-        <div className="flex flex-col items-center justify-center gap-10 w-full h-screen bg-dark-gray px-28">
+        <div
+            id="devices"
+            className="flex flex-col items-center justify-center gap-10 w-full h-screen bg-dark-gray px-28 snap-center"
+        >
             <div className="flex flex-row items-center justify-center gap-[50px]">
                 <img
                     className=" h-72 w-72"

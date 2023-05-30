@@ -3,8 +3,10 @@ import { memo, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { io } from "socket.io-client";
 import { UserIcon } from "@heroicons/react/20/solid";
+
 import Button from "@components/ui-kit/Button/Button";
 import Modal from "@components/ui-kit/Modal/Modal";
+
 import { GameMenuType } from "./types";
 
 export function clickOnCurrentBlock() {
