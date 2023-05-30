@@ -23,8 +23,10 @@ const Header: HeaderType = () => {
                 <div>
                     <ul className="flex flex-row gap-24">
                         {LINKS.map((link) => (
-                            <li>
-                                <a href={link.href}>{link.name}</a>
+                            <li key={link.hash}>
+                                <a href={link.href} key={link.hash}>
+                                    {link.name}
+                                </a>
                             </li>
                         ))}
                     </ul>

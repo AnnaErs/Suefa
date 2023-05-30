@@ -9,12 +9,13 @@ import Modal from "@components/ui-kit/Modal/Modal";
 
 import { GameMenuType } from "./types";
 
-export function clickOnCurrentBlock() {
+function clickOnCurrentBlock() {
     const currentBlock = document.querySelector(
         ".current-block"
     ) as HTMLElement;
     currentBlock && currentBlock.click();
 }
+
 const GameMenu: GameMenuType = () => {
     let [selectedButton, setSelectingButton] = useState(1);
     const router = useRouter();
@@ -153,4 +154,5 @@ const GameMenu: GameMenuType = () => {
         </>
     );
 };
+
 export default memo(GameMenu);
