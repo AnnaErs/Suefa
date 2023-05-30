@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-import GameMenu from "@components/pages/GameMenu";
+import GameMenu from "@components/pages/ChooseGame/GameMenu";
 
 import { GameMenuPageType } from "./types";
 
