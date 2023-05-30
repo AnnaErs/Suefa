@@ -4,7 +4,7 @@ import { PhonePlusConsoleType } from "./types";
 
 const DeviceInfo: PhonePlusConsoleType = () => {
     return (
-        <div className="flex flex-col items-center justify-center gap-10 w-full h-screen bg-light-black px-28">
+        <div className="flex flex-col items-center justify-center gap-10 w-full h-screen bg-light-black px-28 snap-center">
             <div>
                 <h1 className="text-white text-7xl">
                     Телефон + Экран = Консоль

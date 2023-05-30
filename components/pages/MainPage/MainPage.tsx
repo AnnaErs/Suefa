@@ -14,7 +14,7 @@ const MainPage: MainPageType = () => {
     };
 
     return (
-        <div className="h-screen w-full bg-[url(https://storage.yandexcloud.net/suefa-backet/Backgroung-svg.svg)] bg-cover bg-center p-24 bg-fixed">
+        <div className="h-screen w-full bg-[url(https://storage.yandexcloud.net/suefa-backet/Backgroung-svg.svg)] bg-cover bg-center p-24 bg-fixed snap-start">
             <div className="min-h-screen w-full flex flex-col justify-center items-center">
                 <Button onclick={handleClick}>Играть прямо сейчас</Button>
                 <img
