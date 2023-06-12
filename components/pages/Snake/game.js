@@ -50,12 +50,16 @@ export function createGame(ctx) {
         ctx.fillRect(0, 0, ctx.width, ctx.height);
         ctx.fillStyle = "white";       
          ctx.font = "50px Arial";
-        ctx.fillText(`Game Over! Score: ${score}`, box * 3, box * 8);
-        ctx.fillStyle = "red";        
-        ctx.fillRect(box * 7, box * 10, box * 5, box * 2);
+        ctx.fillText(`Game Over!`, box * 6, box * 8);
+        ctx.fillStyle = "white";       
+         ctx.font = "50px Arial";
+        ctx.fillText(`Score: ${score}`, box * 7, box * 10);
+
+        ctx.fillStyle = "red";
+        ctx.fillRect(box * 7, box * 12, box * 5, box * 2);
         ctx.fillStyle = "white";
         ctx.font = "30px Arial";       
-         ctx.fillText("Restart", box * 7.5, box * 11.7);
+         ctx.fillText("Restart", box * 7.9, box * 13.25);
     }
     function drawGame() {        ctx.drawImage(ground, 0, 0);
         ctx.drawImage(foodImg, food.x, food.y);
