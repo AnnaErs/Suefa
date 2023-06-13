@@ -28,9 +28,8 @@ const GameMenu: GameMenuType = () => {
         e.preventDefault();
         router.push("/games/pingpong");
     };
-    const handleClickThrowModal = (e: any) => {
-        e.preventDefault();
-        setIsOpen;
+    const handleClickThrowModal = () => {
+        setIsOpen(true);
     };
 
     useEffect(() => {
