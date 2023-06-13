@@ -10,7 +10,6 @@ const Snake = () => {
     const [selectedButton,setSelectingButton] = useState();
     const router = useRouter();
     const handleClick = (e) => {
-        console.log('круо');
         e.preventDefault();
         router.push('/');
 

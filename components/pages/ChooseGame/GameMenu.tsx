@@ -103,7 +103,7 @@ const GameMenu: GameMenuType = () => {
                     <button
                         className={`${
                             selectedButton === 1 ? "current-block" : ""
-                        } w-[250px] h-[150px] text-sm text-white`}
+                        } w-[250px] h-[150px] text-sm`}
                         onClick={handleClick}
                     >
                         <div
@@ -111,9 +111,9 @@ const GameMenu: GameMenuType = () => {
                                 selectedButton === 1
                                     ? "border-4 border-purple"
                                     : ""
-                            }"w-[250px] h-[110px] bg-[url(https://storage.yandexcloud.net/suefa-backet/snake-image.png)] bg-cover rounded-[20px]`}
+                            }"w-[250px] h-[110px] bg-[url(https://storage.yandexcloud.net/suefa-backet/snake-image.png)] bg-cover rounded-[20px] border border-purple`}
                         />
-                        <div className="flex flex-row justify-between items-center px-1">
+                        <div className="flex flex-row justify-between items-center px-1 text-white">
                             Змейка
                             <div className="flex flex-row items-center">
                                 <p className="text-base">1</p>
@@ -124,16 +124,16 @@ const GameMenu: GameMenuType = () => {
                     <button
                         className={`${
                             selectedButton === 2 ? "current-block" : ""
-                        } w-[250px] h-[150px] text-sm text-white`}
+                        } w-[250px] h-[150px] text-sm`}
                     >
                         <div
                             className={`${
                                 selectedButton === 2
                                     ? "border-4 border-purple"
                                     : ""
-                            }w-[250px] h-[110px] bg-[url(https://storage.yandexcloud.net/suefa-backet/tetris.jpg)] bg-cover rounded-[20px]`}
+                            }w-[250px] h-[110px] bg-[url(https://storage.yandexcloud.net/suefa-backet/tetris.jpg)] bg-cover rounded-[20px] border border-purple`}
                         />
-                        <div className="flex flex-row justify-between items-center px-1">
+                        <div className="flex flex-row justify-between items-center px-1 text-white">
                             Тетрис
                             <div className="flex flex-row items-center">
                                 <p className="text-base">1</p>
@@ -144,16 +144,16 @@ const GameMenu: GameMenuType = () => {
                     <button
                         className={`${
                             selectedButton === 3 ? "current-block" : ""
-                        } w-[250px] h-[150px] text-sm text-white`}
+                        } w-[250px] h-[150px] text-sm`}
                     >
                         <div
                             className={`${
                                 selectedButton === 3
                                     ? "border-4 border-purple"
                                     : ""
-                            }w-[250px] h-[110px] bg-[url(https://storage.yandexcloud.net/suefa-backet/pacman-game-card.png)] bg-cover rounded-[20px]`}
+                            }w-[250px] h-[110px] bg-[url(https://storage.yandexcloud.net/suefa-backet/pacman-game-card.png)] bg-cover rounded-[20px] border border-purple`}
                         />
-                        <div className="flex flex-row justify-between items-center px-1">
+                        <div className="flex flex-row justify-between items-center px-1 text-white">
                             Packman
                             <div className="flex flex-row items-center">
                                 <p className="text-base">1</p>

@@ -7,39 +7,39 @@ const Slider: SliderType = () => {
         <div className="logos">
             <div className="logos-slide">
                 <img
-                    className="w-[400px] h-[200px]"
+                    className="w-[300px] h-[150px]"
                     src="https://storage.yandexcloud.net/suefa-backet/pacman-game-card.png"
                 />
                 <img
-                    className="w-[400px] h-[200px]"
+                    className="w-[300px] h-[150px]"
                     src="https://storage.yandexcloud.net/suefa-backet/snake-image.png"
                 />
                 <img
-                    className="w-[400px] h-[200px]"
+                    className="w-[300px] h-[150px]"
                     src="https://storage.yandexcloud.net/suefa-backet/pacman-game-card.png"
                 />
                 <img
-                    className="w-[400px] h-[200px]"
+                    className="w-[300px] h-[150px]"
                     src="https://storage.yandexcloud.net/suefa-backet/tetris.jpg"
                 />
                 <img
-                    className="w-[400px] h-[200px]"
+                    className="w-[300px] h-[150px]"
                     src="https://storage.yandexcloud.net/suefa-backet/snake-image.png"
                 />
                 <img
-                    className="w-[400px] h-[200px]"
+                    className="w-[300px] h-[150px]"
                     src="https://storage.yandexcloud.net/suefa-backet/tetris.jpg"
                 />
                 <img
-                    className="w-[400px] h-[200px]"
+                    className="w-[300px] h-[150px]"
                     src="https://storage.yandexcloud.net/suefa-backet/snake-image.png"
                 />
                 <img
-                    className="w-[400px] h-[200px]"
+                    className="w-[300px] h-[150px]"
                     src="https://storage.yandexcloud.net/suefa-backet/pacman-game-card.png"
                 />
                 <img
-                    className="w-[400px] h-[200px]"
+                    className="w-[300px] h-[150px]"
                     src="https://storage.yandexcloud.net/suefa-backet/tetris.jpg"
                 />
             </div>
