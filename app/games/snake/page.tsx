@@ -4,7 +4,7 @@ import Snake from "@components/pages/Snake/Snake";
 
 import { GameType } from "./types";
 
-const Game: GameType = () => {
+const SnakePageGame: GameType = () => {
     return (
         <div className="w-full h-screen bg-dark-gray">
             <div className="flex justify-center items-end p-40">
@@ -14,4 +14,4 @@ const Game: GameType = () => {
     );
 };
 
-export default memo(Game);
+export default memo(SnakePageGame);
