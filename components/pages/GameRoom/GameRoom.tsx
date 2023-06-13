@@ -5,6 +5,7 @@ import { io } from "socket.io-client";
 
 import GameCard from "@components/ui-kit/GameCard/GameCard";
 import Modal from "@components/ui-kit/Modal/Modal";
+import Toast from "@components/Toast/Toast";
 
 import { GameRoomType } from "./types";
 
@@ -32,13 +33,23 @@ const GameRoom: GameRoomType = () => {
         <>
             <div className="h-screen w-full bg-[url(https://storage.yandexcloud.net/suefa-backet/Backgroung-svg.svg)] bg-cover bg-center p-24 bg-fixed overflow-hidden contrast-50 absolute top-0 -z-10"></div>
             <div className="flex min-h-screen justify-center items-center">
-                <GameCard
-                    userName="Анна Ершова"
-                    userAmount="1"
-                    connectionCode={code?.toString() || ""}
-                    onClickBackwards={handleClickBackwards}
-                    onClickForwards={setIsOpen}
-                />
+                <div className="flex flex-row gap-14 items-center">
+                    <div className=" max-w-sm -ml-20">
+                        <Toast
+                            toastText="Подключите ваш телефон к общему WI-FI"
+                            secParagraph="Справа вы видете код, который нужно будет ввести на телефоне"
+                            thirdParagraph="После ввода кода, используйте свой телефон, чтобы выбрать игру"
+                            forthParagraph="Наслаждайтесь!"
+                        />
+                    </div>
+                    <GameCard
+                        userName="Анна Ершова"
+                        userAmount="1"
+                        connectionCode={code?.toString() || ""}
+                        onClickBackwards={handleClickBackwards}
+                        onClickForwards={setIsOpen}
+                    />
+                </div>
                 {isOpen ? (
                     <Modal
                         header="Начните играть прямо сейчас!"
