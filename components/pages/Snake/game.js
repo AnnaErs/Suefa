@@ -1,70 +1,71 @@
 import { io } from "socket.io-client";
+import {useRouter} from "next/navigation";
 
 const ground = typeof window !== 'undefined' ?  new Image(): {};
 ground.src = "/ground.png";
 let dir;
 const foodImg = typeof window != 'undefined' ? new Image(): {};
-foodImg.src = "/food.png"; 
+foodImg.src = "/food.png";
 
 export function createGame(ctx) {
-    const socket = io("localhost:8080/mobile");    
+    const socket = io("localhost:8080/mobile");
     socket.on("rightButtonClickOnMobile", () => {
         if (dir != "left") dir = "right";    });
-    socket.on("leftButtonClickOnMobile", () => {        
+    socket.on("leftButtonClickOnMobile", () => {
         if (dir != "right") dir = "left";
     });    socket.on("downButtonClickOnMobile", () => {
         if (dir != "up") dir = "down";    });
-    socket.on("upButtonClickOnMobile", () => {        
+    socket.on("upButtonClickOnMobile", () => {
         if (dir != "down") dir = "up";
-    });    
+    });
     socket.on("enterButtonClickOnMobile", () => {
         restartGame();
     });
     socket.on("backButtonClickOnMobile", () => {
-        console.log('rhenj');
-        window.history.back();
+        const router = useRouter();
+        router.push("/game-menu");
     });
 
     let box = 32;
     let score = 0;
     let food = {
-        x: Math.floor(Math.random() * 17 + 1) * box,        
+        x: Math.floor(Math.random() * 17 + 1) * box,
         y: Math.floor(Math.random() * 15 + 3) * box,
     };
-    let snake = [];    
+    let snake = [];
     snake[0] = {
-        x: 9 * box,        
+        x: 9 * box,
         y: 10 * box,
     };
-    function eatTail(head, arr) {        
+    function eatTail(head, arr) {
         for (let i = 0; i < arr.length; i++) {
-            if (head.x == arr[i].x && head.y == arr[i].y) {                
+            if (head.x == arr[i].x && head.y == arr[i].y) {
                 clearInterval(game);
                 drawDeathScreen();            }
         }    }
-    function restartGame() {        
+    function restartGame() {
         window.location.reload(false);
     }
-    function drawDeathScreen() {        
+    function drawDeathScreen() {
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, ctx.width, ctx.height);
-        ctx.fillStyle = "white";       
+        ctx.fillStyle = "white";
          ctx.font = "50px Arial";
         ctx.fillText(`Game Over!`, box * 6, box * 8);
-        ctx.fillStyle = "white";       
+        ctx.fillStyle = "white";
          ctx.font = "50px Arial";
         ctx.fillText(`Score: ${score}`, box * 7, box * 10);
 
         ctx.fillStyle = "red";
         ctx.fillRect(box * 7, box * 12, box * 5, box * 2);
         ctx.fillStyle = "white";
-        ctx.font = "30px Arial";       
+        ctx.font = "30px Arial";
          ctx.fillText("Restart", box * 7.9, box * 13.25);
     }
     function drawGame() {        ctx.drawImage(ground, 0, 0);
         ctx.drawImage(foodImg, food.x, food.y);
         for (let i = 0; i < snake.length; i++) {
-            ctx.fillStyle = i == 0 ? "green" : "red";            
+            ctx.fillStyle = i == 0 ? "green" : "red";
             ctx.fillRect(snake[i].x, snake[i].y, box, box);
         }
         ctx.fillStyle = "white";        ctx.font = "50px Arial";
@@ -72,7 +73,7 @@ export function createGame(ctx) {
         let snakeX = snake[0].x;        let snakeY = snake[0].y;
         if (snakeX == food.x && snakeY == food.y) {
             score++;            food = {
-                x: Math.floor(Math.random() * 17 + 1) * box,                
+                x: Math.floor(Math.random() * 17 + 1) * box,
                 y: Math.floor(Math.random() * 15 + 3) * box,
             };        } else snake.pop();
         if (

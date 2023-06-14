@@ -1,4 +1,5 @@
 import { io } from "socket.io-client";
+import {useRouter} from "next/navigation";
 
 
 export function createGame(context){
@@ -31,8 +32,8 @@ export function createGame(context){
         leftPaddle.dy = 0;
     });
     socket.on("backButtonClickOnMobile", () => {
-
-        window.history.back();
+        const router = useRouter();
+        router.push("/game-menu");
     });
 
     var paddleSpeed = 6;
