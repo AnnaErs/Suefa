@@ -1,5 +1,4 @@
 import { io } from "socket.io-client";
-import {useRouter} from "next/navigation";
 
 const ground = typeof window !== 'undefined' ?  new Image(): {};
 ground.src = "/ground.png";
@@ -22,8 +21,8 @@ export function createGame(ctx) {
         restartGame();
     });
     socket.on("backButtonClickOnMobile", () => {
-        const router = useRouter();
-        router.push("/game-menu");
+        console.log('rhenj');
+        window.history.back();
     });
 
     let box = 32;
