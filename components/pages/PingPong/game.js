@@ -30,6 +30,10 @@ export function createGame(context){
     socket.on('firstPingPongDownButtonIsUpOnMobile',()=>{
         leftPaddle.dy = 0;
     });
+    socket.on("backButtonClickOnMobile", () => {
+
+        window.history.back();
+    });
 
     var paddleSpeed = 6;
     var ballSpeed = 5;

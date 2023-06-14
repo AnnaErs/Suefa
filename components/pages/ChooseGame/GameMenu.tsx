@@ -17,15 +17,18 @@ function clickOnCurrentBlock() {
 }
 
 const GameMenu: GameMenuType = () => {
+    const socket = io("localhost:8080/mobile");
     let [selectedButton, setSelectingButton] = useState(1);
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
     const handleClickSnake = (e: any) => {
         e.preventDefault();
+        socket.emit('joinSnakeRoom');
         router.push("/games/snake");
     };
     const handleClickPingPong = (e: any) => {
         e.preventDefault();
+        socket.emit('joinPingPongRoom');
         router.push("/games/pingpong");
     };
     const handleClickThrowModal = () => {
@@ -61,6 +64,7 @@ const GameMenu: GameMenuType = () => {
         socket.on("enterButtonClickOnMobile", () => {
             clickOnCurrentBlock();
         });
+
     }, [router]);
     return (
         <>
