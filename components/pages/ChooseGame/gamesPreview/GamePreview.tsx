@@ -23,6 +23,11 @@ const GamePreview: GamePreviewType = ({
                     Макс - {amountOfUsers} <UserIcon className="h-3 w-3" />
                 </p>
                 <p>Жанры: аркада</p>
+                <p>
+                    Код комнаты:{" "}
+                    {localStorage.getItem("roomCode") ||
+                        "Не удалось получить код, попробуйте переподключиться"}
+                </p>
             </div>
             <div
                 className={`flex flex-col w-full h-[570px] ${picture} bg-cover p-6`}
@@ -38,7 +43,7 @@ const GamePreview: GamePreviewType = ({
                     </div>
                 </div>
                 <div className="flex justify-end items-end">
-                    <Button onclick={setIsOpen}>Начать играть сейчас</Button>
+                    <Button onclick={setIsOpen} text="Начать играть сейчас" />
                 </div>
                 {isOpen ? (
                     <Modal

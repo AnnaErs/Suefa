@@ -42,9 +42,10 @@ const GameCard: GameCardType = ({
                     >
                         Назад
                     </button>
-                    <Button onclick={onClickForwards}>
-                        Начать прямо сейчас
-                    </Button>
+                    <Button
+                        onclick={onClickForwards}
+                        text="Начать прямо сейчас"
+                    />
                 </div>
             </div>
         </div>

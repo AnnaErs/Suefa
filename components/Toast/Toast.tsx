@@ -1,8 +1,6 @@
 import { memo } from "react";
 import { ArrowDownIcon } from "@heroicons/react/20/solid";
 
-import { CheckIcon } from "@heroicons/react/20/solid";
-
 import { PhonePlusConsoleType as ToastType } from "./types";
 
 const Toast: ToastType = ({
@@ -15,10 +13,10 @@ const Toast: ToastType = ({
     return (
         <div
             id="toast-default"
-            className="flex items-center w-full max-w-2xl p-4 text-white bg-dark-gray rounded-lg shadow dark:text-gray-400 bg-gray-800 opacity-90"
+            className="flex items-center w-full max-w-3xl p-4 text-white bg-dark-gray rounded-lg shadow dark:text-gray-400 bg-gray-800 opacity-90"
             role="alert"
         >
-            <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-blue-500 bg-blue-100 rounded-lg dark:bg-blue-800 dark:text-blue-200">
+            <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg mr-4">
                 <svg
                     aria-hidden="true"
                     className="w-8 h-8"
@@ -34,7 +32,7 @@ const Toast: ToastType = ({
                 </svg>
                 <span className="sr-only">Fire icon</span>
             </div>
-            <div className="flex flex-col text-center">
+            <div className="flex flex-col text-center items-center">
                 <div className="ml-3 text-xl font-normal">{toastText}</div>
                 {toastSubtitle && (
                     <div className="flex flex-col ml-3 text-lg font-normal items-center">
@@ -43,24 +41,11 @@ const Toast: ToastType = ({
                     </div>
                 )}
                 {secParagraph && (
-                    <div className="relative ml-3 text-lg font-normal mt-5">
-                        <CheckIcon className="absolute w-8 h-8 text-purple" />
-                        <div className="flex">{secParagraph}</div>
-                    </div>
-                )}
-                {thirdParagraph && (
-                    <div className="relative ml-3 text-lg font-normal">
-                        <CheckIcon className="absolute w-8 h-8 text-purple" />
-                        <div className="flex">{thirdParagraph}</div>
-                    </div>
-                )}
-                {forthParagraph && (
-                    <div className=" relative ml-3 text-lg font-normal">
-                        <CheckIcon className="absolute h-8 w-8 text-purple" />
-                        <div className="flex mt-1 justify-center">
-                            {forthParagraph}
-                        </div>
-                    </div>
+                    <ul className="list-image-check max-w-[250px] mt-2">
+                        <li>{secParagraph}</li>
+                        <li>{thirdParagraph}</li>
+                        <li>{forthParagraph}</li>
+                    </ul>
                 )}
             </div>
 

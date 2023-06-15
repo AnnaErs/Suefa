@@ -9,4 +9,8 @@ export const LINKS: Links = [
         name: "Игры",
         href: "/#games",
     },
+    {
+        name: "Подписка",
+        href: "/#sub",
+    },
 ];

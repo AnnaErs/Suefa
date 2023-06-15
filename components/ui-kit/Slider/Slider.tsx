@@ -16,7 +16,7 @@ const Slider: SliderType = () => {
                 />
                 <img
                     className="w-[300px] h-[150px]"
-                    src="https://storage.yandexcloud.net/suefa-backet/pacman-game-card.png"
+                    src="https://storage.yandexcloud.net/suefa-backet/pingpong.png"
                 />
                 <img
                     className="w-[300px] h-[150px]"
@@ -28,7 +28,7 @@ const Slider: SliderType = () => {
                 />
                 <img
                     className="w-[300px] h-[150px]"
-                    src="https://storage.yandexcloud.net/suefa-backet/tetris.jpg"
+                    src="https://storage.yandexcloud.net/suefa-backet/pingpong.png"
                 />
                 <img
                     className="w-[300px] h-[150px]"

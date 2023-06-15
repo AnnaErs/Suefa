@@ -17,15 +17,15 @@ const MainPage: MainPageType = () => {
     return (
         <div className="h-screen w-full bg-[url(https://storage.yandexcloud.net/suefa-backet/Backgroung-svg.svg)] bg-cover bg-center bg-fixed snap-start">
             <div className="min-h-screen w-full flex flex-col justify-center items-center">
-                <div className="mb-10">
+                <div className="mb-10 -mt-10">
                     <Toast
                         toastText="Бери свой телефон, зови друзей и начинай играть в экзклюзивные игры прямо сейчас!"
                         toastSubtitle="Скорей жми на кнопку!"
                     />
                 </div>
-                <Button onclick={handleClick}>Играть прямо сейчас</Button>
+                <Button onclick={handleClick} text="Играть прямо сейчас" />
                 <img
-                    className="object-none object-bottom max-w-full h-[550px] bg-no-repeat bg-cover bg-center -m-10 -p-10"
+                    className="object-bottom max-w-full h-[400px] bg-no-repeat bg-cover bg-center -mb-32"
                     src="https://storage.yandexcloud.net/suefa-backet/Suefa-mainpage.png"
                 />
             </div>
