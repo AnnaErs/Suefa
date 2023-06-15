@@ -18,10 +18,14 @@ export const LINKS: FooterLinks = {
             name: "Подписка",
             href: "/#sub",
         },
+        {
+            name: "FAQ",
+            href: "/#qa",
+        },
     ],
     right: [
         {
-            name: "SUEFA",
+            name: "сделано с любовью в SUEFA",
             href: "/",
         },
     ],

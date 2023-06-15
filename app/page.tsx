@@ -4,6 +4,7 @@ import DeviceInfo from "@components/pages/DeviceInfo/DeviceInfo";
 import PhonePlusConsole from "@components/pages/PhonePlusConsole/PhonePlusConsole";
 import GamesInfo from "@components/pages/GamesInfo/GamesInfo";
 import SubscriptionInfo from "@components/pages/SubscriptionInfo/SubscriptionInfo";
+import QA from "@components/pages/QA/QA";
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <PhonePlusConsole />
             <GamesInfo />
             <SubscriptionInfo />
+            <QA />
         </main>
     );
 }

@@ -13,4 +13,8 @@ export const LINKS: Links = [
         name: "Подписка",
         href: "/#sub",
     },
+    {
+        name: "FAQ",
+        href: "/#qa",
+    },
 ];
