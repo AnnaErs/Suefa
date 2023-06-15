@@ -8,7 +8,7 @@ import { LINKS } from "./consts";
 
 const Header: HeaderType = () => {
     return (
-        <header className="w-full h-[x125p] sticky top-0 ease-in-out duration-200 z-10 shadow-blue bg-dark-gray">
+        <header className="w-full h-28 sticky top-0 ease-in-out duration-200 z-10 shadow-blue bg-dark-gray">
             <div className="flex items-center justify-between px-8 py-4 text-[28px] text-white">
                 <div className="flex flex-row gap-5">
                     <a href="#">

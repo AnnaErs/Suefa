@@ -9,10 +9,15 @@ import Toast from "@components/Toast/Toast";
 
 import { GameRoomType } from "./types";
 
+const min = 100000;
+const max = 999999;
+const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+
 const GameRoom: GameRoomType = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [code, setCode] = useState<number | undefined>();
     const router = useRouter();
+
     const handleClickBackwards = (e: any) => {
         e.preventDefault();
         router.push("/");
@@ -20,15 +25,14 @@ const GameRoom: GameRoomType = () => {
 
     useEffect(() => {
         const socket = io("localhost:8080/mobile");
-        const min = 100000;
-        const max = 999999;
-        const randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
         setCode(randomNumber);
-        socket.emit("codeMessage", randomNumber.toString());
+        socket.emit("codeMessage", code?.toString());
         socket.on("passwordRight", () => {
+            localStorage.setItem("roomCode", code?.toString() || "");
             router.push("/game-menu");
         });
-    }, [router]);
+    }, [router, code]);
+
     return (
         <>
             <div className="h-screen w-full bg-[url(https://storage.yandexcloud.net/suefa-backet/Backgroung-svg.svg)] bg-cover bg-center p-24 bg-fixed overflow-hidden contrast-50 absolute top-0 -z-10"></div>

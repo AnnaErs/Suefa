@@ -14,6 +14,10 @@ export const LINKS: FooterLinks = {
             name: "Игры",
             href: "/#games",
         },
+        {
+            name: "Подписка",
+            href: "/#sub",
+        },
     ],
     right: [
         {
