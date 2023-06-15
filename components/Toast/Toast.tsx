@@ -13,7 +13,7 @@ const Toast: ToastType = ({
     return (
         <div
             id="toast-default"
-            className="flex items-center w-full max-w-3xl p-4 text-white bg-dark-gray rounded-lg shadow dark:text-gray-400 bg-gray-800 opacity-90"
+            className="flex items-center w-full max-w-3xl p-4 text-white bg-dark-gray rounded-3xl shadow dark:text-gray-400 bg-gray-800 opacity-90"
             role="alert"
         >
             <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 rounded-lg mr-4">

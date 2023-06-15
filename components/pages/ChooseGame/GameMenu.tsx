@@ -23,12 +23,12 @@ const GameMenu: GameMenuType = () => {
     const router = useRouter();
     const handleClickSnake = (e: any) => {
         e.preventDefault();
-        socket.emit('joinSnakeRoom');
+        socket.emit("joinSnakeRoom");
         router.push("/games/snake");
     };
     const handleClickPingPong = (e: any) => {
         e.preventDefault();
-        socket.emit('joinPingPongRoom');
+        socket.emit("joinPingPongRoom");
         router.push("/games/pingpong");
     };
     const handleClickThrowModal = () => {
@@ -64,11 +64,10 @@ const GameMenu: GameMenuType = () => {
         socket.on("enterButtonClickOnMobile", () => {
             clickOnCurrentBlock();
         });
-
     }, [router]);
     return (
         <>
-            <div className="w-full h-screen bg-dark-gray -mb-10 ">
+            <div className="w-full h-screen bg-dark-gray">
                 {selectedButton === 1 && (
                     <GamePreview
                         title="Snake"

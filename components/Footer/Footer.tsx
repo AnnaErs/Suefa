@@ -3,10 +3,16 @@ import { memo } from "react";
 
 import { FooterType } from "./types";
 import { LINKS } from "./consts";
+import { usePathname } from "next/navigation";
 
 const Footer: FooterType = () => {
+    const pathname = usePathname();
     return (
-        <footer className=" w-full ease-in-out duration-200 bg-black text-white">
+        <footer
+            className={`${
+                pathname != "/" ? "fixed bottom-0" : ""
+            } w-full ease-in-out duration-200 bg-black text-white`}
+        >
             <div className="flex justify-between px-10">
                 <div className="text-lg flex cursor-pointer">
                     {LINKS.left &&
